@@ -14,10 +14,10 @@
 
 <p align="center">
   <a href="assets/video/decision-gate.mp4">
-    <img src="assets/video/preview.gif" alt="An amber action dot travels a rail toward a gate: it passes once, pauses at the ask lamp, and bounces back at a block" width="720">
+    <img src="assets/video/preview.gif" alt="decision-gate: the animated mark beside the headline number, 12/12 demo actions classified correctly" width="720">
   </a>
   <br>
-  <sub><a href="assets/video/decision-gate.mp4">Watch the 8-second film (MP4, 0.1 MB)</a>. Every number in it comes from the committed results in this repo.</sub>
+  <sub><a href="assets/video/decision-gate.mp4">Watch the 8-second film (MP4, 0.2 MB)</a>. Every number in it comes from the committed results in this repo.</sub>
 </p>
 
 Implementation test of [Think Before You Act: Decision Gate for LLM Agents](https://arxiv.org/abs/2610.38620):
