@@ -1,5 +1,10 @@
 # decision-gate
 
+[![tests](https://github.com/Gjusev/decision-gate/actions/workflows/tests.yml/badge.svg)](https://github.com/Gjusev/decision-gate/actions/workflows/tests.yml)
+[![dependencies](https://img.shields.io/badge/dependencies-0-success)]()
+[![python](https://img.shields.io/badge/python-3.10%2B-blue)]()
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Implementation test of [Think Before You Act: Decision Gate for LLM Agents](https://arxiv.org/abs/2610.38620):
 a cheap gate sits between the agent and its tools and returns allow / ask /
 block for every action before it executes.
@@ -46,17 +51,25 @@ gate = DecisionGate(conformity_check=llm_guard)
 ```
 
 ```bash
-python3 -m pytest tests/   # offline, zero dependencies
+python -m unittest   # offline, zero dependencies, runs on Linux/macOS/Windows
 ```
 
 ## Where this goes next
 
-- Same architecture as [gate-calibrated](https://github.com/Gjusev/gate-calibrated)
-  (conformal risk control on tau-bench retail) but scoped to per-action gates:
-  natural merge is conformal thresholds on top of these rule verdicts
-- Real LLM conformity layer over the Z.ai endpoint, evaluated on the trace
-  with the gate metrics
-- Rule sets per agent profile (the six-agent setup has different risk maps)
+See [ROADMAP.md](ROADMAP.md) — next up: a real LLM conformity layer over the
+Z.ai endpoint (owner-gated), conformal thresholds merged from
+[gate-calibrated](https://github.com/Gjusev/gate-calibrated), and rule sets
+per agent profile. [CONTINUE.md](CONTINUE.md) has the handoff rules for
+coding agents picking this up.
+
+## Repository layout
+
+```
+decisiongate/   Action, Decision, DecisionGate, RulePolicy, demo-trace bench
+tests/          offline unit tests (python -m unittest, zero dependencies)
+ROADMAP.md      ordered next steps
+CONTINUE.md     agent handoff: working rules + STOP points
+```
 
 ## Citation
 
