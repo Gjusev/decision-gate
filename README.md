@@ -5,6 +5,21 @@
 [![python](https://img.shields.io/badge/python-3.10%2B-blue)]()
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo/logo-animated-dark.svg">
+    <img src="assets/logo/logo-animated-light.svg" alt="decision-gate: an action dot meets the gate — pass, pause and ask, or bounce back" width="560">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="assets/video/decision-gate.mp4">
+    <img src="assets/video/preview.gif" alt="An amber action dot travels a rail toward a gate: it passes once, pauses at the ask lamp, and bounces back at a block" width="720">
+  </a>
+  <br>
+  <sub><a href="assets/video/decision-gate.mp4">Watch the 8-second film (MP4, 0.1 MB)</a>. Every number in it comes from the committed results in this repo.</sub>
+</p>
+
 Implementation test of [Think Before You Act: Decision Gate for LLM Agents](https://arxiv.org/abs/2610.38620):
 a cheap gate sits between the agent and its tools and returns allow / ask /
 block for every action before it executes.
@@ -67,6 +82,7 @@ coding agents picking this up.
 ```
 decisiongate/   Action, Decision, DecisionGate, RulePolicy, demo-trace bench
 tests/          offline unit tests (python -m unittest, zero dependencies)
+assets/         animated logo + launch film (SVG, MP4, GIF)
 ROADMAP.md      ordered next steps
 CONTINUE.md     agent handoff: working rules + STOP points
 ```
